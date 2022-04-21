@@ -10,4 +10,6 @@ public interface ProductsRepository {
 
     @NonNull
     List<Product> getAllProducts();
+
+    void addProduct(Product product);
 }

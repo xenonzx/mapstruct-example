@@ -6,4 +6,8 @@ task one map product domain to dto
 4. create mapper
 5. map product to product dto while the `name` property maps to `productName` in the dto
 
-6. task two map dto to product
+task two map dto to product
+ideas
+use nested mapping
+use expressions
+use dateformate and number format

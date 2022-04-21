@@ -25,4 +25,9 @@ public class ProductsRepositoryImpl implements ProductsRepository {
     public ArrayList<Product> getAllProducts() {
         return products;
     }
+
+    @Override
+    public void addProduct(Product product) {
+        products.add(product);
+    }
 }
