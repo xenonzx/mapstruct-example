@@ -14,18 +14,20 @@ import java.util.stream.Collectors;
 
 @RestController
 public class ProductController {
+    @Autowired
+    ProductMapper productMapper;
 
     @Autowired
     ProductsRepository repo;
 
     @GetMapping("/product")
     List<ProductDto> getProducts() {
-        List<ProductDto> ret = repo.getAllProducts().stream().map(it -> ProductMapper.INSTANCE.productToDto(it)).collect(Collectors.toList());
+        List<ProductDto> ret = repo.getAllProducts().stream().map(it -> productMapper.productToDto(it)).collect(Collectors.toList());
         return ret;
     }
 
     @PostMapping("/product")
     void addProduct(@RequestBody ProductDto prod){
-        repo.addProduct(ProductMapper.INSTANCE.dtoToProduct(prod));
+        repo.addProduct(productMapper.dtoToProduct(prod));
     }
 }
