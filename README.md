@@ -19,7 +19,16 @@ task 2: map dto to product & provide mapper through Spring ioc
 1. use inherited mapping 
 2. set spring as component model in @Mapper
 
+task 3: use default value and achieve mapping of private final properties 
+1. using default values (if desc is missing add default desc).
+2. update ProductDto properties to be private finals
+
 ideas
 use nested mapping
 use expressions
 use dateformate and number format
+use value mapping , custom mapping 
+
+for more examples
+https://www.tutorialspoint.com/mapstruct/
+https://stackabuse.com/guide-to-mapstruct-in-java-advanced-mapping-library/

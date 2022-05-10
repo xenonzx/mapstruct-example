@@ -1,10 +1,16 @@
 package com.dakhakhny.mapstruct.demo.application.dto;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Getter
 public class ProductDto {
-	public long skuNumber;
-	public String productName;
-	public String desc;
-	public Double price;
-	public int availableQuantity;
-	public String season;
+	private final long skuNumber;
+	private final String productName;
+	private final String desc;
+	private final Double price;
+	private final int availableQuantity;
+	private final String season;
+	private final String country;
 }
