@@ -23,6 +23,11 @@ task 3: use default value and achieve mapping of private final properties
 1. using default values (if desc is missing add default desc).
 2. update ProductDto properties to be private finals
 
+task 4: mapping nested entities
+1. introduce order entity that contains list of products
+2. introduce order dto
+3. introduce order mapping that automatically uses product mapping
+
 ideas
 use nested mapping
 use expressions
