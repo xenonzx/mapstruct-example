@@ -34,10 +34,16 @@ MapStruct is an annotation processor which is plugged into the Java compiler tha
 2. introduce order dto
 3. introduce order mapping that automatically uses product mapping
 
-#### ideas
+#### Task 5: custom mapping (introduce orderSummery a new property that will only appear in the order dto)
+1. add OrderSummeryDto class. the OrderSummeryDto Object will have total number of items and the sum of their price. 
+2. add orderSummery in the orderdto
+3. add default method in the orders mapping interface
+
+
+#### more features that can be implemented
 use expressions
 use dateformate and number format
-use value mapping , custom mapping 
+use value mapping 
 using before and after
 
 final notes

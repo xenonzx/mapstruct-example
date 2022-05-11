@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dakhakhny.mapstruct.demo.application.dto.ProductDto;
-import com.dakhakhny.mapstruct.demo.application.mapper.OrderMapper;
 import com.dakhakhny.mapstruct.demo.application.mapper.ProductMapper;
-import com.dakhakhny.mapstruct.demo.infrastructure.OrderRepository;
 import com.dakhakhny.mapstruct.demo.infrastructure.ProductsRepository;
 
 @RestController
@@ -23,13 +21,7 @@ public class ProductController {
 	ProductMapper productMapper;
 
 	@Autowired
-	OrderMapper orderMapper;
-
-	@Autowired
 	ProductsRepository productsRepository;
-
-	@Autowired
-	OrderRepository orderRepository;
 
 	@GetMapping("/product")
 	List<ProductDto> getProducts() {
