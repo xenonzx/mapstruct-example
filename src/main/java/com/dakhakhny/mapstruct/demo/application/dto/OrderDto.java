@@ -13,4 +13,5 @@ public class OrderDto {
 	final List<Product> products;
 	final OrderSummeryDto orderSummery;
 	final OrderStateDto orderState;
+	final long requestedAt;
 }

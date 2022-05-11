@@ -52,9 +52,16 @@ order can have many states in the domain but the api consumer is just concerned 
 4. add new mapping interface `OrderStateMapper` to define value mapping between `OrderStateDto` and `OrderState`
 5. to use `OrderStateMapper` in `OrderMapper` add `uses = OrderStateMapper.class` 
 
+
+#### Task 7: property generated from expression
+the api consumer want to know the exact time that his api request was executed.
+
+1. add new property `requestedAt` in `OrderDto`
+2. add expression mapping in `OrderMapper` 
+
 #### more features that can be implemented
 
-use expressions
+
 use dateformate 
 number format 
 using before and after
