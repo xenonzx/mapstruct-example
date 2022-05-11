@@ -15,6 +15,8 @@ public interface ProductMapper {
 	@Mapping(source = "name", target = "productName")
 	@Mapping(source = "desc", target = "desc", defaultValue = "new arrival")
 	@Mapping(source = "manufacturer.country", target = "country")
+	@Mapping(source = "price" , target = "priceFormatted",  numberFormat = "$#.00")
+	@Mapping(source = "originationDate" , target = "originationDate",  dateFormat = "dd.MM.yyyy")
 	ProductDto productToDto(Product product);
 
 	@InheritInverseConfiguration

@@ -1,6 +1,8 @@
 package com.dakhakhny.mapstruct.demo.core.domain.model;
 
 
+import java.util.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -12,8 +14,8 @@ public class Product {
 	final String desc;
 	final Double price;
 	final int availableQuantity;
-	// season is a property that we dont want to show it to user according to our business logic
 	final String season;
+	final Date originationDate;
 	final Manufacturer manufacturer;
 }
 
