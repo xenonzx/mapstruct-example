@@ -38,6 +38,7 @@ MapStruct is an annotation processor which is plugged into the Java compiler tha
 use expressions
 use dateformate and number format
 use value mapping , custom mapping 
+using before and after
 
 final notes
 --
@@ -45,7 +46,15 @@ Automatic type conversion applies to:
 Conversion between primitive types and their respective wrapper types. For example, conversion between int and Integer, float and Float, long and Long, boolean and Boolean etc.
 Conversion between any primitive types and any wrapper types. For example, between int and long, byte and Integer etc.
 Conversion between all primitive and wrapper types and String. For example, conversion between boolean and String, Integer and String, float and String etc.
+using ide plugin
+un mapped target policies (if a property in target is unmapped what should happen)
+using a default method for model in the example
+
 
 for more examples
 https://www.tutorialspoint.com/mapstruct/
 https://stackabuse.com/guide-to-mapstruct-in-java-advanced-mapping-library/
+
+more content
+MapStruct talk by Gunnar Morling https://www.youtube.com/watch?v=nvjqtWQ5zj8
+MapStruct by Filip Hrisafov https://www.youtube.com/watch?v=ICl9gJ4o7Ec
