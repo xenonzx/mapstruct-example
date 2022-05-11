@@ -7,7 +7,7 @@ import com.dakhakhny.mapstruct.demo.application.dto.OrderDto;
 import com.dakhakhny.mapstruct.demo.application.dto.OrderSummeryDto;
 import com.dakhakhny.mapstruct.demo.core.domain.model.Order;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = OrderStateMapper.class)
 public interface OrderMapper {
 	@Mapping(source = "order", target = "orderSummery")
 	OrderDto mapOrder(Order order);

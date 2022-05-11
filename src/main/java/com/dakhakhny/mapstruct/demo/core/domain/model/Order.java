@@ -10,4 +10,5 @@ import lombok.RequiredArgsConstructor;
 public class Order {
 	final String date;
 	final List<Product> products;
+	final OrderState orderState;
 }

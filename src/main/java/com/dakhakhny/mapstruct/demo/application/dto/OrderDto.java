@@ -12,4 +12,5 @@ public class OrderDto {
 	final String date;
 	final List<Product> products;
 	final OrderSummeryDto orderSummery;
+	final OrderStateDto orderState;
 }
