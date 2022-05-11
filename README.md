@@ -13,7 +13,7 @@ MapStruct is an annotation processor which is plugged into the Java compiler tha
 ## Tasks
 
 ### Task 1: Map product domain to dto
-
+aim is to map domain object to dto object while the properties are public and highlight automatic mapping of properties with the same name.
 1. add gradle dependencies
 2. create domain model
 3. create dto model
@@ -21,14 +21,15 @@ MapStruct is an annotation processor which is plugged into the Java compiler tha
 5. map product to product dto while the `name` property maps to `productName` in the dto
 
 ### Task 2: Map dto to product & provide mapper through Spring ioc
-
-1. use inherited mapping
+aim is to provide map dto to domain object without much hassle.
+1. use inherited mapping `@InheritInverseConfiguration`
 2. set spring as component model in @Mapper
 
 ### Task 3: Use default value and achieve mapping of private final properties
-
-1. using default values (if desc is missing add default desc).
+aim is to show  how to use default value and highlight the difference between when properties are public and when properties are final and private
+1. using default values (if `desc` is missing add default desc).
 2. update ProductDto properties to be private finals
+   1. for mapping to work you need setters and getters to update properties. if setter is not present a mapstruct is smart enough to use the constructor but it fails to use lomobok  static methods that replace constructors 
 
 ### Task 4: Mapping nested entities
 
@@ -37,13 +38,14 @@ MapStruct is an annotation processor which is plugged into the Java compiler tha
 3. introduce order mapping that automatically uses product mapping
 
 ### Task 5: Custom mapping (introduce orderSummery a new property that will only appear in the order dto)
-
+aim is to show how to provide default method in the mapper interface to support with mapping process. 
+aim to highlight the `orderSummary` is being generated -not being mapped as no matching property-
 1. add `OrderSummeryDto` class. the `OrderSummeryDto` Object will have total number of items and the sum of their price.
 2. add `orderSummery` property in the `OrderDto` class
 3. add a `default` method in the orders mapping interface
 
 ### Task 6: Value mapping
-
+aim is to show how to use value mapping 
 order can have many states in the domain but the api consumer is just concerned with fewer states (IN_PROGRESS,DELIVERED,FAILED)
 
 1. add `OrderStateDto` Enum with the following cases  (`IN_PROGRESS`, `DELIVERED`, `FAILED`).
@@ -53,15 +55,16 @@ order can have many states in the domain but the api consumer is just concerned 
 5. to use `OrderStateMapper` in `OrderMapper` add `uses = OrderStateMapper.class`
 
 ### Task 7: Property generated from expression
-
+aim is to show how expression works which is just copping and pasting the expression and you would have to make sure that the imports needed by the expression is there
 the api consumer want to know the exact time that his api request was executed.
 
 1. add new property `requestedAt` in `OrderDto`
 2. add expression mapping in `OrderMapper`
 
 ### Task 8: Number and date format
-
+aim is to show how to use numeber and date formatting both ways
 add special price format
+add special date format
 
 1. add new property `priceFormatted` in `ProductDto`
 2. add numberFormat annotation property in `ProductMapper`
@@ -74,7 +77,7 @@ add special price format
 
 ### More features that can be implemented
 
-using before and after
+using @BeforeMapping / @AfterMapping
 
 ##Final notes
 
